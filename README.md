@@ -1,9 +1,9 @@
-# meme-generator-cli
-Meme Generator written in .NET
-
 <p align="center">
     <img src="sample.png" alt="Sample usage"/>
 </p>
+
+# meme-generator-cli
+Meme Generator written in .NET
 
 ## Example
 ```
