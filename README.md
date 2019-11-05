@@ -6,7 +6,7 @@ Meme Generator written in .NET
 MemeGenerator.exe --image "./pic.jpg" --top "Welcome" --out meme.jpg --size 24 --bottom "to the real world" --color "#ffffff"
 ```
 <p align="center">
-![Sample usage](sample.png)
+    <img src="sample.png" alt="Sample usage"/>
 </p>
 
 ## All arguments
