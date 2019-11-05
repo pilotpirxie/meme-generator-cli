@@ -9,7 +9,7 @@ namespace MemeGenerator
         {
             string inputImage = "";
             string outputImage = "meme.jpg";
-            string upperText = "";
+            string topText = "";
             string bottomText = "";
             string fontColor = "#ffffff";
             int fontSize = 24;
@@ -34,13 +34,13 @@ namespace MemeGenerator
                         }
                     }
 
-                    if (args[i] == "--upper" || args[i] == "-u")
+                    if (args[i] == "--top" || args[i] == "-t")
                     {
                         if (args[i + 1].IndexOf("-") != 0)
                         {
-                            upperText = args[i + 1];
-                            upperText = upperText.Replace("\\n", Environment.NewLine);
-                            upperText = upperText.ToUpper();
+                            topText = args[i + 1];
+                            topText = topText.Replace("\\n", Environment.NewLine);
+                            topText = topText.ToUpper();
                         }
                     }
 
@@ -73,7 +73,7 @@ namespace MemeGenerator
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Wrong arguments {ex.ToString()}");
+                Console.WriteLine($"Wrong arguments {Environment.NewLine} {ex.ToString()}");
                 return -2;
             }
 
@@ -83,7 +83,7 @@ namespace MemeGenerator
                 return -1;
             }
 
-            if (upperText == "" && bottomText == "")
+            if (topText == "" && bottomText == "")
             {
                 Console.WriteLine("Not specified text");
                 return -1;
@@ -98,7 +98,7 @@ namespace MemeGenerator
 
             stringFormat.Alignment = StringAlignment.Center;
             stringFormat.LineAlignment = StringAlignment.Near;
-            graphics.DrawString(upperText, font, new SolidBrush(color), rectangle, stringFormat);
+            graphics.DrawString(topText, font, new SolidBrush(color), rectangle, stringFormat);
 
             stringFormat.Alignment = StringAlignment.Center;
             stringFormat.LineAlignment = StringAlignment.Far;
