@@ -40,6 +40,7 @@ namespace MemeGenerator
                         {
                             upperText = args[i + 1];
                             upperText = upperText.Replace("\\n", Environment.NewLine);
+                            upperText = upperText.ToUpper();
                         }
                     }
 
@@ -49,6 +50,7 @@ namespace MemeGenerator
                         {
                             bottomText = args[i + 1];
                             bottomText = bottomText.Replace("\\n", Environment.NewLine);
+                            bottomText = bottomText.ToUpper();
                         }
                     }
 
@@ -90,7 +92,7 @@ namespace MemeGenerator
             Bitmap bitmap = new Bitmap(inputImage);
             Graphics graphics = Graphics.FromImage(bitmap);
             Font font = new Font("Impact", fontSize, FontStyle.Bold);
-            Rectangle rectangle = new Rectangle(0, fontSize / 2, bitmap.Width, bitmap.Height - fontSize/2);
+            Rectangle rectangle = new Rectangle(0, fontSize / 3, bitmap.Width, bitmap.Height - fontSize/2);
             StringFormat stringFormat = new StringFormat();
             Color color = ColorTranslator.FromHtml(fontColor);
 
