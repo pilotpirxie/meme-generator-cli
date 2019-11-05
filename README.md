@@ -1,13 +1,14 @@
 # meme-generator-cli
 Meme Generator written in .NET
 
-## Sample usage
-```
-MemeGenerator.exe --image "./pic.jpg" --top "Welcome" --out meme.jpg --size 24 --bottom "to the real world" --color "#ffffff"
-```
 <p align="center">
     <img src="sample.png" alt="Sample usage"/>
 </p>
+
+## Example
+```
+MemeGenerator.exe --image "./pic.jpg" --top "Welcome" --out meme.jpg --size 24 --bottom "to the real world" --color "#ffffff"
+```
 
 ## All arguments
 Input file
@@ -15,8 +16,8 @@ Input file
 --image <filepath>
 -i
 --image "./image.jpg"
-
 ```
+
 Output file
 ```
 --out <filepath>
@@ -51,3 +52,6 @@ Color of the font (in hex)
 -c
 --color "#ffffff"
 ```
+
+### License
+meme-generator-cli is [MIT licensed](./LICENSE).
